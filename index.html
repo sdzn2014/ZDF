@@ -119,15 +119,8 @@
                 captchaContainer.style.display = 'none';
                 resultImage.style.display = 'block';
                 
-                // 预加载图片
-                const img = new Image();
-                img.onload = function() {
-                    console.log('图片加载成功');
-                };
-                img.onerror = function() {
-                    handleImageError(img);
-                };
-                img.src = 'zdf.png';
+                // 不需要额外预加载图片
+                console.log('验证成功，显示结果图片');
             } else {
                 errorMessage.style.display = 'block';
                 input.value = '';
